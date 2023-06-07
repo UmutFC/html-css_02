@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning</title>
+
+    <style>
+        body{
+            height: 4000px;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+
+        .container{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background: #333;
+        }
+        /* not affected by (tblr) top,bottom,left,right properties */
+            /* position: static; */
+
+        /* we can use tblr */
+            /* position: relative; */
+
+        /* for div inside div */
+        /* positioned relative to itsparent element that is positioned "relative" */
+            /* position:absolute; */
+
+        /* whole browser windows stays same even scrolled */
+            /* position: fixed; */
+
+        /* similar to fixed but you can stick it to certain position */
+            /* position: sticky; */
+
+        #box-1{
+            position: relative;
+            /* since we use position relative, we can move it top, left etc. */
+            top: 50px;
+            left: 50px;
+            background: chocolate;
+
+            /* position: static;  */
+            /* static is default  */
+
+            /* to bring elements front of back with using z-index value */
+            z-index: 1;
+        }
+        #box-2{
+            top: 100px;
+            left: 100px;
+            /* it will not move to the position we want because it is still static, so we make it position absolute to move box to the position */
+
+            position: absolute;
+            background: yellow;
+        }
+        #box-3{
+            bottom: 100px;
+            right: 100px;
+            position: absolute;
+            background: green ;
+        }
+        #box-4{
+
+            position: fixed;
+            background: bisque;
+            /* it will stay where it is, even if scrolled*/
+        }
+        #box-5{
+            position: sticky;
+            top:0;
+            background: pink;
+            /* with position sticky box will stick the position where stated */
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div id="box-1" class="box"></div>
+
+    <div class="container">
+        <div id="box-2" class="box"></div>
+        <div id="box-3" class="box"></div>
+    </div>
+    
+    <div id="box-4" class="box"></div>
+    <div id="box-5" class="box"></div>
+</body>
+</html>

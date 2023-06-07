@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model / Margin & Padding</title>
+
+    <style>
+        /* Margin is the out side of the border and padding is the inside */
+
+        /* CSS Reset */
+        * {
+            /* this is for resetting default margin and padding */
+            margin: 0;
+            padding: 0;
+
+            /* if you use padding and width same time, CSS
+            will use padding order instead of width when they
+            are conflicted. So use box-sizing property. */
+            box-sizing: border-box;
+        }
+
+        .box{
+            background-color: #f4f4f4;
+            border:2px #777 solid;
+            width: 500px;
+
+            /* Padding is box inside */
+            padding:20px;
+            /* padding side by side and this will override above - ones down below overrides ones up above.*/
+            padding-top: 10px;
+            padding-right: 20px ;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            /*same order but shorter - top right bottom left*/
+            padding: 20px 40px 20px 40px;
+            /* and shorter - top/bottom left/right */
+            padding: 30px 60px;
+
+            /* Margin is box outside */
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h3>Box One</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem ipsam consectetur magni incidunt eius odit corrupti amet eaque excepturi iusto. Natus cumque aliquam minus corporis id deserunt esse possimus sequi!</p>
+    </div>
+    <div class="box">
+        <h3>Box Two</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem ipsam consectetur magni incidunt eius odit corrupti amet eaque excepturi iusto. Natus cumque aliquam minus corporis id deserunt esse possimus sequi!</p>
+    </div>
+</body>
+</html>
