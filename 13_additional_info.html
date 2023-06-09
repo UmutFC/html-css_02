@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test File</title>
+</head>
+<style>
+
+     .hello{
+        /* further down the styling takes precedence but targeting class is going to overwrite actual element whether its on above or below of it...*/
+        color: red;
+     
+        margin-top: -30px;
+        /* reverse effects of margin use negative values */
+        padding-top: -30px;
+        
+    }
+
+    h1{
+        /* display: none; */
+        /* when you use responsive design sometimes you might to not show things */
+
+        /* visibility: hidden; */
+        /* this is similar to display none but the difference is the space remains same but chosen content is invisible */
+        
+        color: blue !important;
+        /* ...but if we claim !important flag it is going to take the precedence */
+    }
+</style>
+<body>
+    <h1 class="hello">Hello World</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo rerum, quos tempore minima quas corporis iure et molestias magni obcaecati.</p>
+</body>
+</html>
