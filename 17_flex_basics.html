@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Basics</title>
+    <style>
+       * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .item {
+            background: #9e9797;
+            border: #ccc solid 2px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            width: 200px;
+        }
+
+        .flex-container {
+            display: flex;
+
+            /* flex direction is row by default */
+            /* flex-direction: column; */
+            /* we can also do column reverse */
+            /* flex-direction: column-reverse; */
+
+            /* flex-wrap: wrap; */
+            /* flex-wrap will shrink items when smaller screen occurs */
+
+            flex : 1 0 200px;
+            /* grow - shrink - basis */
+        }
+
+        .item-1 {
+            flex-shrink: 0;
+            /* to prevent the item shrink */
+        }
+
+        .item-2 {
+            flex-grow: 1;
+            flex-basis: 0;
+            /* change item shrink rate */
+        }
+
+        .item-3 {
+            flex-grow: 2;
+            flex-basis: 0;
+            /* if we put flex-basis to each boxes item-3 will be always twice size of item-2 duo to their flex-grow magnitude */
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="item item-1">
+            <h3>Item 1</h3>
+        </div>
+        <div class="item item-2">
+            <h3>Item 2</h3>
+        </div>
+        <div class="item item-3">
+            <h3>Item 3</h3>
+        </div>  
+    </div>
+</body>
+</html>
