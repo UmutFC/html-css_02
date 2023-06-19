@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Targeted Selectors</title>
+    <style>
+        /* Direct Child */
+        /* '>' is to reach direct child of div like son but not grandson, so p in ul li will not be affected because its is not direct child */
+        div > p {
+            background-color: #ddd;
+        }
+
+        /* Directly After */
+        /* '+' is to reach first next sibling of div */
+        div + p {
+            background-color: #333;
+            color: white;
+        }
+
+        /* By Attribute */
+        /* '[]' is to reach element which has the attribute inside of '[]' */
+        a[target] {
+            color: #000;
+        }
+
+        /* you can also pick specific attribute with adding values "  =' ' " */
+        a[target='_blank'] {
+            background-color: orange;
+            color: white;
+        }
+
+        /* Specific Attribute Values */
+        /* '[type='']' is to reach same named elements but has different type*/
+        input[type='text'] {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+
+        <ul>
+            <!-- li{Item $}*3 for automatic generate li items 1-2-3 -->
+            <li>Item 1</li>
+            <li><p>Item 2</p></li>
+            <li>Item 3</li>
+        </ul>
+
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <a href="#">Page 1</a>
+    <a href="#" target="_self">Page 2</a>
+    <!-- this link 'target' is for to open new tab instead of changing current page via link -->
+    <a href="https://www.google.com.tr/" target="_blank">Google</a>
+
+    <br><br>
+
+    <form >
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <input type="submit" placeholder="Submit">
+    </form>
+</body>
+</html>
