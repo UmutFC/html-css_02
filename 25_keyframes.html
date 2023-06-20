@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframes</title>
+    <style>
+        body {
+            background: #333;
+        }
+
+        .box {
+            background: white;
+            width: 200px;
+            height: 200px;
+
+            /* dont forget to add position if you want to move objects with usign animation */
+            position: relative;
+            
+            /* animation-name: animate1;
+            animation-duration: 5s; */
+           
+            /* you can set how many times animation will repeat */
+            /* animation-iteration-count: 1; */
+           
+            /* if you set animation fill mode forwards animation will remain same in the last position */
+            /* animation-fill-mode: forwards; */
+
+            /* you can delay animations */
+            /* animation-delay: 0s; */
+
+            /* you can make animation reverse */
+            /* animation-direction: alternate-reverse; */
+
+            /* this is to set motion of animation like at the beginning or end */
+            /* animation-timing-function: ease-in-out; */
+
+            animation: animate1 5s forwards 1s ease-in-out;
+            /* you can do same things with one line */
+        }
+
+        /* with using keyframes we adjust what will animation that we set, do */
+        @keyframes animate1 {
+            /* from {
+                width: 200px;
+                /* since box is already 200px, no need of 'from' here
+            } */
+        
+            /* to {
+                width: 600px;
+            } */
+
+            from {
+                top:0;
+            }
+
+            to {
+                width: 600px;
+                background-color: aquamarine;
+                top: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>    
+</body>
+</html>
