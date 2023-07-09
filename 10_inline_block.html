@@ -1,75 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inline & Block Elements Styling</title>
 
     <style>
-        /* Changing block level element into inline */
-        li{
-            display: inline;
-            /* this attribute will change the list items' positions */
-        }
+      /* Changing block level element into inline */
+      li {
+        display: inline;
+        /* this attribute will change the list items' positions */
+      }
 
-        li a{
-            padding-right: 20px;
-        }
+      li a {
+        padding-right: 20px;
+      }
 
-        /* Changing inline element into block level element */
-        img{
-            /* you cant do margin to inline element, so we make
+      /* Changing inline element into block level element */
+      img {
+        /* you cant do margin to inline element, so we make
             it block level */
 
-            display: block;
-            margin: auto;
-        }
+        display: block;
+        margin: auto;
+      }
 
-        .box{
-            width: 32%;
-            /* divs will be top of each other because they display as block */
+      .box {
+        width: 32%;
+        /* divs will be top of each other because they display as block */
 
-            /* display: inline; */
-            /* when we use display inline to fix this problem, it will not help
+        /* display: inline; */
+        /* when we use display inline to fix this problem, it will not help
             because width is going to be ignored and margin is also being ignored */
-            display: inline-block;
-            /* so, to be able to fix this problem we should use inline-block */
+        display: inline-block;
+        /* so, to be able to fix this problem we should use inline-block */
 
-            background-color: #f4f4f4;
+        background-color: #f4f4f4;
 
-            padding: 20px;
-            /* because of padding, boxes will not fit in line. To fix this issue, we should use: box sizing */
-            box-sizing: border-box;
-            
-            margin-bottom: 15px;
-        }
+        padding: 20px;
+        /* because of padding, boxes will not fit in line. To fix this issue, we should use: box sizing */
+        box-sizing: border-box;
+
+        margin-bottom: 15px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <ul>
-        <li><a href="#">Techonology</a></li>
-        <li><a href="#">Business</a></li>
-        <li><a href="#">Fashion</a></li>
+      <li><a href="#">Techonology</a></li>
+      <li><a href="#">Business</a></li>
+      <li><a href="#">Fashion</a></li>
     </ul>
 
-    <br><br>
+    <br /><br />
 
-    <img src="/img/leaf.png" alt="My Image">
+    <img src="img/leaf.png" alt="My Image" />
 
-    <br><br>
+    <br /><br />
 
     <div class="box">
-        <h3>Heading</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque ipsam enim adipisci. Reprehenderit molestiae tempora ratione soluta consectetur. Aliquam, possimus.</p>
+      <h3>Heading</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque
+        ipsam enim adipisci. Reprehenderit molestiae tempora ratione soluta
+        consectetur. Aliquam, possimus.
+      </p>
     </div>
     <div class="box">
-        <h3>Heading</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque ipsam enim adipisci. Reprehenderit molestiae tempora ratione soluta consectetur. Aliquam, possimus.</p>
+      <h3>Heading</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque
+        ipsam enim adipisci. Reprehenderit molestiae tempora ratione soluta
+        consectetur. Aliquam, possimus.
+      </p>
     </div>
     <div class="box">
-        <h3>Heading</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque ipsam enim adipisci. Reprehenderit molestiae tempora ratione soluta consectetur. Aliquam, possimus.</p>
+      <h3>Heading</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque
+        ipsam enim adipisci. Reprehenderit molestiae tempora ratione soluta
+        consectetur. Aliquam, possimus.
+      </p>
     </div>
-</body>
+  </body>
 </html>
